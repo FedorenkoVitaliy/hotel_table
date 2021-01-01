@@ -1,0 +1,21 @@
+.table-header-row{
+  padding: 20px;
+  background-color: black;
+  color: gray;
+}
+
+.table-row{
+  background: lightgray;
+
+   &:nth-child(odd){
+     background: lightblue;
+   }
+
+  td{
+    text-align: center;
+  }
+
+  .icon{
+    max-width: 30px;
+  }
+}

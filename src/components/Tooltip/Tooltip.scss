@@ -1,0 +1,30 @@
+.tooltip {
+  cursor: pointer;
+  position: relative;
+
+  .tooltip__content{
+    position: absolute;
+    z-index: 101;
+    display: block;
+    transform: translate3d(0, -10px, 0);
+    transition: all 0.15s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    top: 100%;
+    right: 0;
+    content: attr(data-title);
+    padding: 6px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+    border-radius: 2px;
+    border: 1px solid black;
+    color: white;
+    background-color: transparentize(black, 0.2);
+  }
+
+  &:hover .tooltip__content {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+}
